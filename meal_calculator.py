@@ -1,24 +1,14 @@
-print("Welcome to the meal calculator")
+print("Welcome to the meal calculator!")
+meal_cost = float(input("How much was the charge of the meal?: $"))
+tip = 0.18 * meal_cost
+sales_tax = .07 * meal_cost
+total = meal_cost + tip + sales_tax
+print(f"meal_cost: ${meal_cost:.2f}")
+print(f"tip: ${tip:.2f}")
+print(f"sales_tax: ${sales_tax:.2f}")
+print(f"total: ${total:.2f}")
 
-# Find Food Charge
-meal = float(input("How much did your meal cost?: $"))
 
-# 18 percent tip
-tip_percentage = 18
-tip_amount = (tip_percentage / 100) * meal
-
-# 7 percent sales tax
-sales_tax_percentage = 7
-sales_tax_amount = (sales_tax_percentage / 100) * meal
-
-# Total Price
-total_price = meal + tip_amount + sales_tax_amount
-
-# Display all output
-print(f"Meal: ${meal:.2f}")
-print(f"Tip ({tip_percentage}%): ${tip_amount:.2f}")
-print(f"Sales Tax ({sales_tax_percentage}%): ${sales_tax_amount:.2f}")
-print(f"Total Price: ${total_price:.2f}")
 
 
 
