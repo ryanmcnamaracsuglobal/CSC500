@@ -1,13 +1,11 @@
-# Get the time in hours
-time_in_hours = int(input("Enter the current time (in hours, 0-23): "))
+from datetime import datetime
 
-# Get the number of hours to wait for the alarm
-wait_time = int(input("Enter the number of hours to wait for the alarm: "))
+now = datetime.now()
 
-# Calculate the alarm time
-alarm = (time_in_hours+ wait_time) % 24
-
-# Alarm clock
+current_time = now.strftime("%H:%M:%S")
+print("Current Time =", current_time)
+wait_time = (input("Enter the number of hours to wait for the alarm: "))
+alarm = (current_time + wait_time) % 24
 print(f"The alarm will go off at {alarm:02}:00 hours.")
 
 
